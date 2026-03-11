@@ -13,9 +13,10 @@ import sys
 log = logging.getLogger("nmfly.launcher")
 
 VIEWER_EXE_PATHS = [
-    "../fwmc-build/viewer/Release/fwmc-viewer.exe",
-    "../fwmc-build/viewer/Debug/fwmc-viewer.exe",
-    "build/viewer/Release/fwmc-viewer.exe",
+    "../fwmc/build/viewer/Release/fwmc-viewer.exe",
+    "../fwmc/build/viewer/Debug/fwmc-viewer.exe",
+    "d:/fwmc-build/viewer/Release/fwmc-viewer.exe",
+    "d:/fwmc-build/viewer/Debug/fwmc-viewer.exe",
 ]
 
 
