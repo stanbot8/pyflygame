@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyflygame"
+version = "0.1.0"
+description = "Python bridge for flygame: high-performance flygym/NeuroMechFly on MuJoCo, with spiking connectome integration"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+authors = [{name = "stanbot8"}]
+
+dependencies = [
+    "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+mujoco = ["mujoco>=3.0"]
+nmf = ["neuromechfly>=2.0"]
+fwmc = []  # no extra deps, adapter included
+flygym = ["flygym"]
+dev = ["pytest", "ruff"]
+
+[project.scripts]
+nmfly = "nmfly.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
